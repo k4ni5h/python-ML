@@ -102,17 +102,6 @@ int main()
                             } else if(array4[i] == (array4[j])){
                                         count[z] = count[z]+1;
                             }
-                        } else if(floorf(array3[i]) == array3[i]){
-                            if(array3[i] == floor(array3[j])){
-                                if(array4[i] == -1.0){
-                                    count[z] = count[z]+1;
-                                }else if(floorf(array4[i]) == array4[i]){
-                                     if(array4[i] == floor(array4[j]))
-                                         count[z] = count[z]+1;
-                                } else if(array4[i] == (array4[j])){
-                                        count[z] = count[z]+1;
-                                }
-                            }
                         } else if(array3[i] == (array3[j])){
                                 if(array4[i] == -1.0){
                                     count[z] = count[z]+1;
@@ -123,7 +112,16 @@ int main()
                                 } else if(array4[i] == (array4[j])){
                                         count[z] = count[z]+1;
                                 }
-                        }
+                        } else if(floorf(array3[i]) == array3[i]){
+                                if(array4[i] == -1.0){
+                                    count[z] = count[z]+1;
+                                }else if(floorf(array4[i]) == array4[i]){
+                                     if(array4[i] == floor(array4[j]))
+                                         count[z] = count[z]+1;
+                                } else if(array4[i] == (array4[j])){
+                                        count[z] = count[z]+1;
+                                }
+                        } 
                     }
                 }
          }            
